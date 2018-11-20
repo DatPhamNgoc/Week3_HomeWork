@@ -27,8 +27,8 @@ return false;
 function reTweet(input) {
   list.splice(input,0,list[input]);
   list[input+1].isLike = false;
-  var ul = document.getElementById(`addTweet-${input}`);
-  ul.insertAdjacentHTML('afterend',generateTweetHtml(list[input].text,input));
+  var j = document.getElementById(`addTweet-${input}`);
+  j.insertAdjacentHTML('afterend',generateTweetHtml(list[input].text,input));
 }
 function toggleLike(input) {
   list[input].isLike = !list[input].isLike;
